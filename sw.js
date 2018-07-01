@@ -35,6 +35,14 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+    var requestUrl = new URL(event.request.url);
+
+    if (requestUrl.origin === location.origin) {
+        if (requestUrl.pathname === 'sw-currency-converter/') {
+            event.respondWith(caches.match('/sw-currency-converter/'));
+            return;
+        }
+    }
     event.respondWith(
         caches.match(event.request).then((res) => res || requestServer(event))
     );
