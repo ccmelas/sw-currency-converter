@@ -1,6 +1,6 @@
 importScripts('js/cache-polyfill.js');
 
-const CACHE_VERSION = 'sw-currency-converter-v28';
+const CACHE_VERSION = 'sw-currency-converter-v29';
 const CACHE_FILES = [
     '/',
     '/sw-currency-converter/',
@@ -35,9 +35,10 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-    var requestUrl = new URL(event.request.url);
+    const requestUrl = new URL(event.request.url);
 
     if (requestUrl.origin === location.origin) {
+        console.log(requestUrl.pathname);
         if (requestUrl.pathname === 'sw-currency-converter/') {
             event.respondWith(caches.match('/sw-currency-converter/'));
             return;
