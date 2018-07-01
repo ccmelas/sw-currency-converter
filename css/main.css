@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #161847;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #161847;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conversion__area {
+    width: 50%;
+    height: 80%;
+    background-color: #FFF;
+    border-radius: 1%;
+    text-align: center;
+}
+
+.conversion__header h3 {
+    color: #161847;
+    font-family: Pacifico;
+    font-size: 200%;
+}
+
+.conversion__header p {
+    font-family: Lato;
+    color: #A61414;
+    margin-top: -2em;
+}
+
+.conversion__converter {
+    margin-top: 4em;
+}
+
+.conversion__unit {
+    margin-bottom: 4em;
+}
+.conversion__unit input {
+    padding: 1em 1em;
+    background-color: #161847;
+    color: #FFF;
+    width: 60%;
+    border: 0;
+    border-radius: 5px;
+    font-family: Lato;
+    font-weight: 100;
+    font-size: 150%;
+    letter-spacing: .2em;
+}
+
+.conversion__unit input:focus {
+    outline: none;
+}
+
+.conversion__unit p {
+    cursor: pointer;
+    font-variant: small-caps;
+    font-family: Lato;
+    font-weight: bold;
+    color: #161847;
+    text-shadow: 4.5em 2px 5px rgba(22, 24, 71, 0.5), -4.5em 2px 5px rgba(22, 24, 71, 0.5);
+}
+
+.currencylist {
+    position: fixed;
+    height: 100%;
+    right: 0;
+    width: 25%;
+    background-color: #FFF;
+    display: none;
+}
+
+.list__header {
+    text-align: center;
+}
+
+.list__header button {
+    color: #FFF;
+    background-color: #A61414;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    padding: .5em;
+    cursor: pointer;
+}
+
+.list__header h3 {
+    color: #161847;
+    font-family: Pacifico;
+    font-size: 200%;
+}
+
+.list__header p {
+    font-family: Lato;
+    color: #A61414;
+    margin-top: -2em;
+}
+
+.list__container {
+    height: 80%;
+    padding-top: 5%;
+    overflow-y: auto;
+}
+
+.list__item {
+    padding: .03em 1em;
+    font-family: Lato;
+    cursor: pointer;
+}
+
+.list__item.odd {
+    background-color: #F7EDED;
+}
+
+@media (max-width: 460px) {
+    .container {
+        width: 100%;
+    }
+    .conversion__area {
+        width: 95%;
+    }
+
+    .currencylist {
+        width: 100%;
+    }
+}

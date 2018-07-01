@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="conversion__area">
+            <div class="conversion__header">
+                <h3>Currency converter</h3>
+                <p>Tap currency for more options</p>
+            </div>
+            <div class="conversion__converter">
+                <div class="conversion__unit conversion__from">
+                    <input type="text" id="fromInput"/>
+                    <p onclick="openList(0)" id="fromText"></p>
+                </div>
+                <div class="conversion__unit conversion__to">
+                    <input type="text" readonly id="toInput" value="0"/>
+                    <p onclick="openList(1)" id="toText"></p>
+                </div>
+            </div>
+        </div>
+        <div class="currencylist" id="currencyListContainer">
+            <div class="list__header">
+                <button>
+                    CLOSE
+                </button>
+                <h3>Currency List</h3>
+                <p>Tap currency to select</p>
+            </div>
+            <div class="list__container" id="currencyList">
+            </div>
+        </div>
+    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/converter.js"></script>
+</body>
+</html>
