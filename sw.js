@@ -3,6 +3,7 @@ importScripts('js/cache-polyfill.js');
 const CACHE_VERSION = 'sw-currency-converter-v28';
 const CACHE_FILES = [
     '/',
+    '/sw-currency-converter/',
     'js/main.js',
     'js/converter.js',
     'css/main.css',
