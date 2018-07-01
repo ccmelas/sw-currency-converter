@@ -96,13 +96,17 @@ const displayCurrencies = () => {
     setRate();
 };
 
+const closeSelectionContainer = () => {
+    currencyListContainer.slideUp(500);
+};
+
 const selectCurrency = (currencyID) => {
     if (!selecting) {//selecting from
         selectedFrom = currencyID;
     } else {
         selectedTo = currencyID;
     }
-    currencyListContainer.slideUp(500);
+    closeSelectionContainer();
     updateCurrencyTexts();
     setRate();
 }
